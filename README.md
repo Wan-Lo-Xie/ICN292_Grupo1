@@ -13,18 +13,12 @@ El principal problema operativo radica en la **etapa inicial del proceso product
 
 # (ii) Información en carpetas
 
-**assets**
+**assets** Contiene los diagramas BPMN, tablas y diagramas utilizados en el proyecto.
 
-Contiene los diagramas BPMN, tablas y diagramas utilizados en el proyecto.
-
-**docs**
-
-Contiene la información general de la PYME, los requerimientos y los modelos BPMN junto a una breve explicación del flujo y mejoras.
+**docs** Contiene la información general de la PYME, los requerimientos y los modelos BPMN junto a una breve explicación del flujo y mejoras.
 
 
-**informe**
-
-Contiene el informe del proyecto
+**informe** Contiene el informe del proyecto
 
 
 # (iii) Relación con Entrega 2
