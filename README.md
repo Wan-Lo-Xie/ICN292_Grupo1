@@ -23,7 +23,7 @@ El principal problema operativo radica en la **etapa inicial del proceso product
 
 # (iii) Relación con Entrega 2
 
-
+Se aplica el nuevo modelo BPMN con las mejores y/o cambios propuestos además de aplicación de la automatización.
 
 # (iv) Integrantes y Roles
 
