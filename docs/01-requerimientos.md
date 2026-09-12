@@ -21,3 +21,13 @@ Además de esto, se tendrá un proceso extra en la comparación entre el materia
 En cuanto a lo que quedará fuera de esta mejora, es todo lo que no tiene que ver con el proceso de retiro de materia prima y la recepción de esta para la futura producción; es decir, el área de ventas, el área de producción como tal, esto en términos netamente de impresión, troquelado y rebobinado, contabilidad, entre otras áreas que no pertenecen al proceso de obtención de material desde bodega.
 
 # Requisitos
+
+Los requisitos se definieron a partir del problema detectado en bodega: retirar una bobina distinta a la indicada en la orden de producción. La propuesta busca verificar el material con código QR antes de comenzar la producción y dejar registro del retiro.
+
+Las prioridades se indican como Obligatorio, Importante o Deseable.
+
+[Requisitos Funcionales](https://github.com/Wan-Lo-Xie/ICN292_Grupo1/tree/fa9951ae02df476210b1664b6aa0327f1fefc5fe/assets/Requisitos/Requisitos%20funcionales]
+
+[Requisitos no Funcionales](https://github.com/Wan-Lo-Xie/ICN292_Grupo1/tree/fa9951ae02df476210b1664b6aa0327f1fefc5fe/assets/Requisitos/Requisitos%20no%20funcionales)
+
+
