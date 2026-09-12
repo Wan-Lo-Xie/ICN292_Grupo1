@@ -1,4 +1,4 @@
-# BMPN
+# Propuesta de Solución e Impacto Operativo
 
 Para abordar de manera definitiva la problemática operativa en el área de bodegas, caracterizada por la entrega errónea de materia prima hacia el área de fabricación, se diseñó una propuesta de mejora basada en la integración de un Sistema de Información para la Gestión (SIG). Esta solución implementa un mecanismo de doble verificación apoyado en un catálogo de códigos QR con distinción de colores e identificación descriptiva, optimizando el proceso de retiro sin reemplazar la estructura productiva existente.
 
