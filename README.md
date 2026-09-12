@@ -40,4 +40,4 @@ Carolina Tavil: Coordinadora del Proyecto y Diseñadora de Datos
 
 # (v) Informe
 
-
+[Informe.pdf](https://github.com/Wan-Lo-Xie/ICN292_Grupo1/blob/9a277d6052cb4847b38e4a37494c139bc1ff6327/informe/ICN292_P100_E1_Flores_Guajardo_Tavil_Vasquez_Xie.pdf) e [Informe.docx](https://github.com/Wan-Lo-Xie/ICN292_Grupo1/blob/9a277d6052cb4847b38e4a37494c139bc1ff6327/informe/ICN292_P100_E1_Flores_Guajardo_Tavil_Vasquez_Xie.docx)
