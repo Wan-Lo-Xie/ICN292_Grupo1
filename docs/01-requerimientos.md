@@ -26,7 +26,7 @@ Los requisitos se definieron a partir del problema detectado en bodega: retirar 
 
 Las prioridades se indican como Obligatorio, Importante o Deseable.
 
-[Requisitos Funcionales](https://github.com/Wan-Lo-Xie/ICN292_Grupo1/tree/fa9951ae02df476210b1664b6aa0327f1fefc5fe/assets/Requisitos/Requisitos%20funcionales]
+[Requisitos Funcionales](https://github.com/Wan-Lo-Xie/ICN292_Grupo1/tree/fa9951ae02df476210b1664b6aa0327f1fefc5fe/assets/Requisitos/Requisitos%20funcionales)
 
 [Requisitos no Funcionales](https://github.com/Wan-Lo-Xie/ICN292_Grupo1/tree/fa9951ae02df476210b1664b6aa0327f1fefc5fe/assets/Requisitos/Requisitos%20no%20funcionales)
 
