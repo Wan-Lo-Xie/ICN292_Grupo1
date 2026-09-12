@@ -13,9 +13,36 @@ El principal problema operativo radica en la **etapa inicial del proceso product
 
 # (ii) Información en carpetas
 
+**assets**
+
+Contiene los diagramas BPMN, tablas y diagramas utilizados en el proyecto.
+
+**docs**
+
+Contiene la información general de la PYME, los requerimientos y los modelos BPMN junto a una breve explicación del flujo y mejoras.
+
+
+**informe**
+
+Contiene el informe del proyecto
+
+
 # (iii) Relación con Entrega 2
 
+
+
 # (iv) Integrantes y Roles
+
+Antonia Flores: Analista de Procesos y Documentación BPMN
+
+Wan Lo Xie: Diseñador de Base de Datos y Apoyo al Desarrollo
+
+Bastián Guajardo: Desarrollador Full Stack y Administrador de Repositorio
+
+Mateo Vásquez: Analista de Negocio y Control de Indicadores
+
+Carolina Tavil: Coordinadora del Proyecto y Diseñadora de Datos
+
 
 # (v) Informe
 
