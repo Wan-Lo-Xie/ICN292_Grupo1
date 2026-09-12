@@ -37,7 +37,7 @@ Lo anterior ocurre debido a que, cuando se utiliza un material incorrecto, es ne
 
 Como consecuencia, se produciría un aumento significativo en los tiempos de entrega y en los costos asociados a la producción, debido al consumo adicional de materiales, horas de trabajo y uso de maquinaria. El desglose de estos impactos se presenta a continuación:
 
-https://github.com/Wan-Lo-Xie/ICN292_Grupo1/blob/45c1dc46e53dc9a27bbed760ed2779ab11098b12/assets/ICN292_P100_E1_Flores_Guajardo_Tavil_Vasquez_Xie(costos%20operarios).jpg
+[Costos Operativos](https://github.com/Wan-Lo-Xie/ICN292_Grupo1/blob/45c1dc46e53dc9a27bbed760ed2779ab11098b12/assets/ICN292_P100_E1_Flores_Guajardo_Tavil_Vasquez_Xie(costos%20operarios).jpg)
 
 Se consideran 2 tipos de operarios, esto debido a que, dependiendo de la producción que se realizará, se necesitan distintos tipos de operarios. Esto se debe principalmente al hecho de que existen producciones que llevan materiales y pinturas más complejas de trabajar, lo que hace que solo el operario de tipo 1 pueda llevar a cabo dicha producción. Por lo que, si se continúa con este análisis, los costos estipulados para la impresión de inmediato aumentan en un 50%. Además de esto, se debe considerar la materia prima que se pierde en este proceso, la cual entraría a ser considerada como merma.
 
