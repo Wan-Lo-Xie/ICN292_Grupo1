@@ -1,0 +1,11 @@
+erDiagram
+  PROVEEDORES ||--o{ MATERIALES : suministra
+  MATERIALES ||--o{ BOBINAS : identifica
+  MATERIALES ||--o{ ORDENES_PRODUCCION : requerido_por
+  ORDENES_PRODUCCION ||--o{ RETIROS : comprende
+  BOBINAS ||--o| RETIROS : se_entrega_en
+  USUARIOS ||--o{ RETIROS : retira
+  USUARIOS ||--o{ VALIDACIONES : realiza
+  ORDENES_PRODUCCION ||--o{ VALIDACIONES : revisada_en
+  BOBINAS ||--o{ VALIDACIONES : leida_en
+  RETIROS o|--o{ VALIDACIONES : recepcion

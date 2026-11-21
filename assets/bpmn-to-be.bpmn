@@ -1,0 +1,171 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" id="Definitions_Colorink_E2" targetNamespace="https://example.edu/colorink/e2" exporter="ICN292 E2 demo">
+  <bpmn:process id="Process_Colorink_E2" name="Doble verificacion QR" isExecutable="false">
+    <bpmn:laneSet id="LaneSet_1">
+      <bpmn:lane id="Lane_BODEGA" name="Bodega">
+        <bpmn:flowNodeRef>Start_1</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_orden</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_escanear</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_SIG" name="SIG automatizado">
+        <bpmn:flowNodeRef>Task_comparar1</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gate_1</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_alerta1</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_retiro</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_comparar2</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gate_2</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_alerta2</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_confirmar</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_PRODUCCION" name="Producción">
+        <bpmn:flowNodeRef>Task_recibir</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_escanear2</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>End_1</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:startEvent id="Start_1" name="Inicio"/>
+    <bpmn:task id="Task_orden" name="Consultar orden"/>
+    <bpmn:task id="Task_escanear" name="Escanear QR en bodega"/>
+    <bpmn:serviceTask id="Task_comparar1" name="Comparar material y orden"/>
+    <bpmn:exclusiveGateway id="Gate_1" name="¿Coincide?"/>
+    <bpmn:serviceTask id="Task_alerta1" name="Alerta / bloquear retiro"/>
+    <bpmn:serviceTask id="Task_retiro" name="Registrar retiro pendiente"/>
+    <bpmn:task id="Task_recibir" name="Recibir bobina"/>
+    <bpmn:task id="Task_escanear2" name="Escanear QR antes de imprimir"/>
+    <bpmn:serviceTask id="Task_comparar2" name="Verificar QR de producción"/>
+    <bpmn:exclusiveGateway id="Gate_2" name="¿Coincide?"/>
+    <bpmn:serviceTask id="Task_alerta2" name="Alerta / no iniciar"/>
+    <bpmn:serviceTask id="Task_confirmar" name="Confirmar retiro e inventario"/>
+    <bpmn:endEvent id="End_1" name="Fin"/>
+    <bpmn:sequenceFlow id="Flow_1" sourceRef="Start_1" targetRef="Task_orden"/>
+    <bpmn:sequenceFlow id="Flow_2" sourceRef="Task_orden" targetRef="Task_escanear"/>
+    <bpmn:sequenceFlow id="Flow_3" sourceRef="Task_escanear" targetRef="Task_comparar1"/>
+    <bpmn:sequenceFlow id="Flow_4" sourceRef="Task_comparar1" targetRef="Gate_1"/>
+    <bpmn:sequenceFlow id="Flow_5" sourceRef="Gate_1" targetRef="Task_alerta1" name="No"/>
+    <bpmn:sequenceFlow id="Flow_6" sourceRef="Task_alerta1" targetRef="Task_escanear" name="Reintentar"/>
+    <bpmn:sequenceFlow id="Flow_7" sourceRef="Gate_1" targetRef="Task_retiro" name="Sí"/>
+    <bpmn:sequenceFlow id="Flow_8" sourceRef="Task_retiro" targetRef="Task_recibir"/>
+    <bpmn:sequenceFlow id="Flow_9" sourceRef="Task_recibir" targetRef="Task_escanear2"/>
+    <bpmn:sequenceFlow id="Flow_10" sourceRef="Task_escanear2" targetRef="Task_comparar2"/>
+    <bpmn:sequenceFlow id="Flow_11" sourceRef="Task_comparar2" targetRef="Gate_2"/>
+    <bpmn:sequenceFlow id="Flow_12" sourceRef="Gate_2" targetRef="Task_alerta2" name="No"/>
+    <bpmn:sequenceFlow id="Flow_13" sourceRef="Task_alerta2" targetRef="Task_escanear2" name="Reintentar"/>
+    <bpmn:sequenceFlow id="Flow_14" sourceRef="Gate_2" targetRef="Task_confirmar" name="Sí"/>
+    <bpmn:sequenceFlow id="Flow_15" sourceRef="Task_confirmar" targetRef="End_1"/>
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Process_Colorink_E2">
+      <bpmndi:BPMNShape id="Shape_Lane_BODEGA" bpmnElement="Lane_BODEGA" isHorizontal="true">
+        <dc:Bounds x="15" y="50" width="2220" height="160"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_Lane_SIG" bpmnElement="Lane_SIG" isHorizontal="true">
+        <dc:Bounds x="15" y="210" width="2220" height="160"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_Lane_PRODUCCION" bpmnElement="Lane_PRODUCCION" isHorizontal="true">
+        <dc:Bounds x="15" y="370" width="2220" height="160"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_Start_1" bpmnElement="Start_1">
+        <dc:Bounds x="75" y="96" width="46" height="46"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_Task_orden" bpmnElement="Task_orden">
+        <dc:Bounds x="226" y="96" width="115" height="68"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_Task_escanear" bpmnElement="Task_escanear">
+        <dc:Bounds x="377" y="96" width="115" height="68"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_Task_comparar1" bpmnElement="Task_comparar1">
+        <dc:Bounds x="528" y="255" width="115" height="68"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_Gate_1" bpmnElement="Gate_1">
+        <dc:Bounds x="679" y="255" width="46" height="46"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_Task_alerta1" bpmnElement="Task_alerta1">
+        <dc:Bounds x="830" y="255" width="115" height="68"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_Task_retiro" bpmnElement="Task_retiro">
+        <dc:Bounds x="981" y="255" width="115" height="68"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_Task_recibir" bpmnElement="Task_recibir">
+        <dc:Bounds x="1132" y="411" width="115" height="68"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_Task_escanear2" bpmnElement="Task_escanear2">
+        <dc:Bounds x="1283" y="411" width="115" height="68"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_Task_comparar2" bpmnElement="Task_comparar2">
+        <dc:Bounds x="1434" y="255" width="115" height="68"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_Gate_2" bpmnElement="Gate_2">
+        <dc:Bounds x="1585" y="255" width="46" height="46"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_Task_alerta2" bpmnElement="Task_alerta2">
+        <dc:Bounds x="1736" y="255" width="115" height="68"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_Task_confirmar" bpmnElement="Task_confirmar">
+        <dc:Bounds x="1887" y="255" width="115" height="68"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_End_1" bpmnElement="End_1">
+        <dc:Bounds x="2038" y="411" width="46" height="46"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Edge_1" bpmnElement="Flow_1">
+        <di:waypoint x="130" y="130"/>
+        <di:waypoint x="226" y="130"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_2" bpmnElement="Flow_2">
+        <di:waypoint x="281" y="130"/>
+        <di:waypoint x="377" y="130"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_3" bpmnElement="Flow_3">
+        <di:waypoint x="432" y="130"/>
+        <di:waypoint x="528" y="289"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_4" bpmnElement="Flow_4">
+        <di:waypoint x="583" y="289"/>
+        <di:waypoint x="679" y="289"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_5" bpmnElement="Flow_5">
+        <di:waypoint x="734" y="289"/>
+        <di:waypoint x="830" y="289"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_6" bpmnElement="Flow_6">
+        <di:waypoint x="885" y="289"/>
+        <di:waypoint x="377" y="130"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_7" bpmnElement="Flow_7">
+        <di:waypoint x="734" y="289"/>
+        <di:waypoint x="981" y="289"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_8" bpmnElement="Flow_8">
+        <di:waypoint x="1036" y="289"/>
+        <di:waypoint x="1132" y="445"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_9" bpmnElement="Flow_9">
+        <di:waypoint x="1187" y="445"/>
+        <di:waypoint x="1283" y="445"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_10" bpmnElement="Flow_10">
+        <di:waypoint x="1338" y="445"/>
+        <di:waypoint x="1434" y="289"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_11" bpmnElement="Flow_11">
+        <di:waypoint x="1489" y="289"/>
+        <di:waypoint x="1585" y="289"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_12" bpmnElement="Flow_12">
+        <di:waypoint x="1640" y="289"/>
+        <di:waypoint x="1736" y="289"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_13" bpmnElement="Flow_13">
+        <di:waypoint x="1791" y="289"/>
+        <di:waypoint x="1283" y="445"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_14" bpmnElement="Flow_14">
+        <di:waypoint x="1640" y="289"/>
+        <di:waypoint x="1887" y="289"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_15" bpmnElement="Flow_15">
+        <di:waypoint x="1942" y="289"/>
+        <di:waypoint x="2038" y="445"/>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

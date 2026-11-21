@@ -1,0 +1,10 @@
+Pruebas reproducibles sobre un esquema SQLite en memoria.
+
+Consultas de negocio: 5/5 ejecutadas con resultados.
+Datos de referencia: 31 validaciones, 10 alertas, 12 retiros, 9 confirmados y 3 pendientes.
+Casos positivos: lectura bodega correcta, segunda lectura correcta, dos bobinas distintas para la misma orden.
+Casos negativos: retiro sin lectura previa, coincidencia falsa, usuario de área incompatible, bobina previamente utilizada, QR incorrecto en bodega y QR incorrecto en producción.
+El estado de una bobina confirmada es ENTREGADA (no consumida en impresión).
+
+Para repetir la verificación sin modificar archivos: python scripts/verificar_entrega.py
+Todos los registros del seed son sintéticos, NO observaciones de Colorink.

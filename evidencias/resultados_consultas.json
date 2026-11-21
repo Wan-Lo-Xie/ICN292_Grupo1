@@ -1,0 +1,200 @@
+{
+  "01_kpi_generales.sql": [
+    {
+      "escaneos": 31,
+      "alertas": 10,
+      "porcentaje_alertas": 32.26,
+      "retiros_registrados": 12,
+      "retiros_confirmados": 9
+    }
+  ],
+  "02_alertas_etapa.sql": [
+    {
+      "etapa": "BODEGA",
+      "escaneos": 19,
+      "alertas": 7,
+      "porcentaje_alertas": 36.84
+    },
+    {
+      "etapa": "PRODUCCION",
+      "escaneos": 12,
+      "alertas": 3,
+      "porcentaje_alertas": 25.0
+    }
+  ],
+  "03_retiros_pendientes.sql": [
+    {
+      "retiro_id": 10,
+      "orden": "OP-2026-010",
+      "bobina": "BOB-010",
+      "responsable_bodega": "Usuario de bodega B",
+      "fecha_retiro": "2026-11-19 09:16:00"
+    },
+    {
+      "retiro_id": 11,
+      "orden": "OP-2026-011",
+      "bobina": "BOB-011",
+      "responsable_bodega": "Usuario de bodega A",
+      "fecha_retiro": "2026-11-19 09:16:00"
+    },
+    {
+      "retiro_id": 12,
+      "orden": "OP-2026-012",
+      "bobina": "BOB-012",
+      "responsable_bodega": "Usuario de bodega B",
+      "fecha_retiro": "2026-11-19 09:16:00"
+    }
+  ],
+  "04_trazabilidad.sql": [
+    {
+      "orden": "OP-2026-001",
+      "material": "PAP-COU-080",
+      "bobina": "BOB-001",
+      "responsable_bodega": "Usuario de bodega A",
+      "retiro": "2026-11-11 09:16:00",
+      "estado_retiro": "CONFIRMADO",
+      "verificacion_final": "2026-11-11 10:10:00"
+    },
+    {
+      "orden": "OP-2026-002",
+      "material": "PAP-COU-100",
+      "bobina": "BOB-002",
+      "responsable_bodega": "Usuario de bodega B",
+      "retiro": "2026-11-12 09:16:00",
+      "estado_retiro": "CONFIRMADO",
+      "verificacion_final": "2026-11-12 10:10:00"
+    },
+    {
+      "orden": "OP-2026-003",
+      "material": "PAP-COU-120",
+      "bobina": "BOB-003",
+      "responsable_bodega": "Usuario de bodega A",
+      "retiro": "2026-11-13 09:16:00",
+      "estado_retiro": "CONFIRMADO",
+      "verificacion_final": "2026-11-13 10:10:00"
+    },
+    {
+      "orden": "OP-2026-004",
+      "material": "PAP-TER-080",
+      "bobina": "BOB-004",
+      "responsable_bodega": "Usuario de bodega B",
+      "retiro": "2026-11-14 09:16:00",
+      "estado_retiro": "CONFIRMADO",
+      "verificacion_final": "2026-11-14 10:10:00"
+    },
+    {
+      "orden": "OP-2026-005",
+      "material": "PAP-TER-100",
+      "bobina": "BOB-005",
+      "responsable_bodega": "Usuario de bodega A",
+      "retiro": "2026-11-15 09:16:00",
+      "estado_retiro": "CONFIRMADO",
+      "verificacion_final": "2026-11-15 10:10:00"
+    },
+    {
+      "orden": "OP-2026-006",
+      "material": "PAP-OP-060",
+      "bobina": "BOB-006",
+      "responsable_bodega": "Usuario de bodega B",
+      "retiro": "2026-11-16 09:16:00",
+      "estado_retiro": "CONFIRMADO",
+      "verificacion_final": "2026-11-16 10:10:00"
+    },
+    {
+      "orden": "OP-2026-007",
+      "material": "PAP-OP-090",
+      "bobina": "BOB-007",
+      "responsable_bodega": "Usuario de bodega A",
+      "retiro": "2026-11-17 09:16:00",
+      "estado_retiro": "CONFIRMADO",
+      "verificacion_final": "2026-11-17 10:10:00"
+    },
+    {
+      "orden": "OP-2026-008",
+      "material": "PP-BLA-070",
+      "bobina": "BOB-008",
+      "responsable_bodega": "Usuario de bodega B",
+      "retiro": "2026-11-18 09:16:00",
+      "estado_retiro": "CONFIRMADO",
+      "verificacion_final": "2026-11-18 10:10:00"
+    },
+    {
+      "orden": "OP-2026-009",
+      "material": "PP-BLA-090",
+      "bobina": "BOB-009",
+      "responsable_bodega": "Usuario de bodega A",
+      "retiro": "2026-11-19 09:16:00",
+      "estado_retiro": "CONFIRMADO",
+      "verificacion_final": "2026-11-19 10:10:00"
+    },
+    {
+      "orden": "OP-2026-010",
+      "material": "PP-BLA-110",
+      "bobina": "BOB-010",
+      "responsable_bodega": "Usuario de bodega B",
+      "retiro": "2026-11-19 09:16:00",
+      "estado_retiro": "PENDIENTE",
+      "verificacion_final": null
+    },
+    {
+      "orden": "OP-2026-011",
+      "material": "PP-TRA-070",
+      "bobina": "BOB-011",
+      "responsable_bodega": "Usuario de bodega A",
+      "retiro": "2026-11-19 09:16:00",
+      "estado_retiro": "PENDIENTE",
+      "verificacion_final": null
+    },
+    {
+      "orden": "OP-2026-012",
+      "material": "PP-TRA-090",
+      "bobina": "BOB-012",
+      "responsable_bodega": "Usuario de bodega B",
+      "retiro": "2026-11-19 09:16:00",
+      "estado_retiro": "PENDIENTE",
+      "verificacion_final": null
+    }
+  ],
+  "05_materiales_alertados.sql": [
+    {
+      "material_solicitado": "BOPP-MAT-080",
+      "alertas": 1
+    },
+    {
+      "material_solicitado": "BOPP-MAT-100",
+      "alertas": 1
+    },
+    {
+      "material_solicitado": "PAP-COU-100",
+      "alertas": 1
+    },
+    {
+      "material_solicitado": "PAP-COU-120",
+      "alertas": 1
+    },
+    {
+      "material_solicitado": "PAP-OP-090",
+      "alertas": 1
+    },
+    {
+      "material_solicitado": "PAP-TER-100",
+      "alertas": 1
+    },
+    {
+      "material_solicitado": "PP-BLA-070",
+      "alertas": 1
+    },
+    {
+      "material_solicitado": "PP-BLA-090",
+      "alertas": 1
+    },
+    {
+      "material_solicitado": "PP-TRA-090",
+      "alertas": 1
+    },
+    {
+      "material_solicitado": "PP-TRA-110",
+      "alertas": 1
+    }
+  ]
+}
